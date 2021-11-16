@@ -1,0 +1,11 @@
+# depslib dependency file v1.0
+1570305531 source:c:\users\user\desktop\l3 cmi\3a005 - programmation - méthode numérique pour la mécanique\tp_2 - méthodes directes\tp_2 - exo_1\main.c
+	<stdio.h>
+	<stdlib.h>
+	<math.h>
+
+1570305531 source:c:\users\user\desktop\l3 cmi\3a005 - programmation - méthode numérique pour la mécanique\tp_2 - méthodes directes\exo_triangulaire_inf\main.c
+	<stdio.h>
+	<stdlib.h>
+	<math.h>
+

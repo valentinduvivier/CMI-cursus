@@ -1,0 +1,11 @@
+# depslib dependency file v1.0
+1574980807 source:c:\users\user\documents\partie 2_debut\main.c
+	<stdlib.h>
+	<stdio.h>
+	<math.h>
+
+1576163724 source:c:\users\user\desktop\l3 cmi\l3 cmi - 1er semestre\3a005 - programmation - méthode numérique pour la mécanique\projet\partie 2\jour 3 - début partie 2\main.c
+	<stdlib.h>
+	<stdio.h>
+	<math.h>
+

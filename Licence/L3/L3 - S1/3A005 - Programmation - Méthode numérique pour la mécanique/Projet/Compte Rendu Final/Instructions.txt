@@ -1,0 +1,130 @@
+﻿/*
+    Instruction Compilation code Pendule Simple - DUVIVIER Valentin et MAYET Matej
+
+
+
+Pour ce qui est des lignes à taper pour compiler le programme ainsi qu'afficher les courbes correspondant aux fichhiers textes créés, les voici :
+
+
+
+Compilation code  -  "gcc Code.c –o projet -lm"
+
+
+
+Tracé courbes   -  Dérivée première Q 1.2 : "plot 'Derivee_1ere.txt' u 1:2 w lp"
+
+		-  Dérivée seconde Q 1.2 : "plot 'Derivee_2nde.txt' u 1:2 w lp"
+
+ 
+               	-  Vérification dérivée première Q 1.2 : "plot 'Verification_derivee_1ere.txt' u 1:2 w lp"
+
+                -  Vérification dérivée seconde Q 1.2 : "plot 'Verification_derivee_2nde.txt' u 1:2 w lp"
+
+               
+
+		-  Gmx Q 1.4        : "plot 'Gmx.txt' u 1:2 w lp"
+
+
+                -  Taylor Q 2.3.2   : "plot 'TAYLOR.txt' u 1:2 w lp"
+
+                -  Theta linéaire Q 2.1  : "plot 'Theta_lineaire.txt' u 1:2 w lp"
+  
+             		-  Angle Fonction du temps Q 2.3.3 : "plot 'Angle_fct_temps.txt' u 1:2 w lp"
+
+
+
+Nous avons décidé de tracer Gmx Q 2.3.2 à l'aide de l'outil Matlab. Vous trouverz cette courbe sur le rapport écrit section "Méthode de différence centrée"
+
+/* --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- */
+
+
+
+Préambule : 
+Dans l'ensemble du code, seul les affichages des opérations réalisées ainsi que les cacluls de polynômes moindres carrés et les calculs d'erreurs sont affichés. 
+Les autres résultats sont surtout intéressant pour être stocké dans des fichiers textes pour par la suite être modéliser, donner une représentation visuelle de l'étude.
+
+
+
+Vous pouvez décommenter les lignes correspondants à ces affichages mais nous ne vous le conseillons pas. 
+
+Du moins, veillez à n'en décommenter qu'un à la fois pour l'afficher ensuite avant de le recommenter sinon l'affichage des messages indiquant que le code compile bien risquent de ne pas tous rentrer dans la fenêtre prévue pour.
+
+Globalement, munissez vous en priorité de gnuplot et Matlab pour l'affichage des courbes
+
+
+.
+
+Les questions qui ne sont pas abordés ici bénéficient d'ores et déjà d'une description dans le code et sont globalement automatisées dans le sens où vous n''aurez rien à décommenter, les calculs et affichages sont déjà inclus.
+
+
+
+PARTIE 1 (Lignes 91-371):
+
+	Le code affiche lui même les étapes réalisées.
+    
+	L'affichage des opérations effectuées ainsi que la créations de fichier texte s'exécutent automatiquement.
+    
+    
+
+	Ces fichiers textes permettent le tracer des dérivées 1ere et 2nde, les valeurs du polynôme des moindres carré ainsi que celles de l'intégrale.
+    
+	Vous pouvez commenter les lignes 166, 167, 191, 192 si vous ne voulez pas de ces fichiers textes.
+
+
+	La Q 1.4 (Lignes 247-371) vous offre la possibilité de travailler soit avec ne résolution d'un système de type Cholesky ou bien de type LU.
+    	La résolution par Cholesky est mise par défaut, vous pouvez néanmoins commenter cette dernière puis décommenter LU pour utiliser la méthode LU.
+
+
+
+PARTIE 2 (Lignes 371-906):
+    
+	Cette partie continent plus de ligne à décoder  pour l'affichage des résultats. De plus, elle inclue des typedef qui peuvent prêter à confusion lorsqu'on est pas habitué à cette fonction.
+	Veuillez vous référer à la documentation suivante si tel est le cas (c'est en anglais) : https://en.cppreference.com/w/cpp/language/typedef
+
+
+	Les questions a et b de la Q 2.2 se font automatiquement. Il n'y a qu'une ligne qui s'affiche seule, on ne prend pas beaucoup de place.
+
+
+    
+	Pour la Q 2.2.c on a choisi de faire une boucle pour l'optimisation du PAS (cf documentation sur ce point dans l'encadrer de la Q 2.2.c).
+	Ce PAS n'est pas nécessaire mais il ne pose aucun problème pour la compilation du code. Il offre juste plus de précision.
+ 
+    
+	
+	Pour comprendre son utilisation, vous pouvez décommenter les lignes 636, 643, 644 qui afficheront le PAS optimisé ainsi que l'angle initial et la période du pendule correspondants
+    
+    
+  
+
+	Pour la Q 2.3, les listes de valeurs sont un peu plus nombreuses. Elles sont là aussi commentées mais vous pourrez les décommenter pour afficher les valeurs de position de votre pendule.
+
+    	Etant donné les longues listes de cette partie, nous vous conseillons de vous référer aux valeurs des extremums qui doivent être les mêmes à un signe près. Vous pouvez aussi vous assurer que Theta_0 = Theta_final
+
+	Q 2.3.1 - Pour afficher les valeurs de positions théoriques, décommenter la ligne 728
+    
+    
+	Q 2.3.2 Vous aurez par la suite de nouveau la possibilité de décommenter une section permettant de travailler avec la décompositin LU plutôt que la décomposition Cholesky par défaut.
+
+    	Nous vous rappelons qu'il est alors nécessaire de vérifier que la méthode que vous n'utiliser pas reste bien commentée. Par ailleurs, il est à noter que la méthode Cholesky reste plus précise.
+
+    
+
+	Q 2.3.3 Vous pouvez décommenter la ligne 839 pour afficher les positions du pendule de la cas non-linéaire
+    
+
+
+
+
+Pour finir vous pouvez, maintenant que vos fichiers textes on été cré, les utilisés pour tracer les courbes correspondantes à chaque partie
+
+
+
+
+PARTIE 3 :
+    Pas de code ass
+
+
+ocié    
+	      Partie non faite
+
+*/

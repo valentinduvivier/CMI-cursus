@@ -1,0 +1,6 @@
+# depslib dependency file v1.0
+1570305761 source:c:\users\user\desktop\l3 cmi\3a005 - programmation - méthode numérique pour la mécanique\tp_2 - méthodes directes\tp_2 - exo_2\main.c
+	<stdio.h>
+	<stdlib.h>
+	<math.h>
+
