@@ -1,0 +1,11 @@
+
+Code manual :
+
+ 1 - The code is splitted into parts with explicit names.
+
+ 2 - In order to run the code, you mandatorily have to run the first part in first. Then it is up to what you are willing to see.
+
+ 3 - Before running the code you need to attach the file called "les_bugges.m" into Matlab. It contains the data for the aerodynamic loading measured during the experiment.
+and a lot of other useful matrices.
+
+ 4 -  Take care to only run Part5 once, otherwise you have to clear all because the values arn't overwrite but rather add to the previous one.
