@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<!--[if IE 7]>
+<html class="ie ie7" lang="fr-FR">
+<![endif]-->
+<!--[if IE 8]>
+<html class="ie ie8" lang="fr-FR">
+<![endif]-->
+<!--[if !(IE 7) | !(IE 8)  ]><!-->
+<html lang="fr-FR">
+<!--<![endif]-->
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width" />
+<title>Expérience du brachistochrone | Physique à Main Levée</title>
+<link rel="profile" href="http://gmpg.org/xfn/11" />
+<link rel="pingback" href="" />
+<!--[if lt IE 9]>
+<script src="http://phymain.unisciel.fr/wp-content/themes/phymain_1_2/js/html5.js" type="text/javascript"></script>
+<![endif]-->
+<link rel='dns-prefetch' href='//platform-api.sharethis.com' />
+<link rel='dns-prefetch' href='//fonts.googleapis.com' />
+<link rel='dns-prefetch' href='//s.w.org' />
+<link rel="alternate" type="application/rss+xml" title="Physique à Main Levée &raquo; Flux" href="http://phymain.unisciel.fr/feed/" />
+<link rel="alternate" type="application/rss+xml" title="Physique à Main Levée &raquo; Flux des commentaires" href="http://phymain.unisciel.fr/comments/feed/" />
+		<script type="text/javascript" src="http://gc.kis.v2.scr.kaspersky-labs.com/FD126C42-EBFA-4E12-B309-BB3FDD723AC1/main.js" charset="UTF-8"></script><script type="text/javascript">
+			window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/12.0.0-1\/72x72\/","ext":".png","svgUrl":"https:\/\/s.w.org\/images\/core\/emoji\/12.0.0-1\/svg\/","svgExt":".svg","source":{"concatemoji":"http:\/\/phymain.unisciel.fr\/wp-includes\/js\/wp-emoji-release.min.js?ver=46e54c47b4ac548c1e5f6201cedf6127"}};
+			!function(a,b,c){function d(a,b){var c=String.fromCharCode;l.clearRect(0,0,k.width,k.height),l.fillText(c.apply(this,a),0,0);var d=k.toDataURL();l.clearRect(0,0,k.width,k.height),l.fillText(c.apply(this,b),0,0);var e=k.toDataURL();return d===e}function e(a){var b;if(!l||!l.fillText)return!1;switch(l.textBaseline="top",l.font="600 32px Arial",a){case"flag":return!(b=d([55356,56826,55356,56819],[55356,56826,8203,55356,56819]))&&(b=d([55356,57332,56128,56423,56128,56418,56128,56421,56128,56430,56128,56423,56128,56447],[55356,57332,8203,56128,56423,8203,56128,56418,8203,56128,56421,8203,56128,56430,8203,56128,56423,8203,56128,56447]),!b);case"emoji":return b=d([55357,56424,55356,57342,8205,55358,56605,8205,55357,56424,55356,57340],[55357,56424,55356,57342,8203,55358,56605,8203,55357,56424,55356,57340]),!b}return!1}function f(a){var c=b.createElement("script");c.src=a,c.defer=c.type="text/javascript",b.getElementsByTagName("head")[0].appendChild(c)}var g,h,i,j,k=b.createElement("canvas"),l=k.getContext&&k.getContext("2d");for(j=Array("flag","emoji"),c.supports={everything:!0,everythingExceptFlag:!0},i=0;i<j.length;i++)c.supports[j[i]]=e(j[i]),c.supports.everything=c.supports.everything&&c.supports[j[i]],"flag"!==j[i]&&(c.supports.everythingExceptFlag=c.supports.everythingExceptFlag&&c.supports[j[i]]);c.supports.everythingExceptFlag=c.supports.everythingExceptFlag&&!c.supports.flag,c.DOMReady=!1,c.readyCallback=function(){c.DOMReady=!0},c.supports.everything||(h=function(){c.readyCallback()},b.addEventListener?(b.addEventListener("DOMContentLoaded",h,!1),a.addEventListener("load",h,!1)):(a.attachEvent("onload",h),b.attachEvent("onreadystatechange",function(){"complete"===b.readyState&&c.readyCallback()})),g=c.source||{},g.concatemoji?f(g.concatemoji):g.wpemoji&&g.twemoji&&(f(g.twemoji),f(g.wpemoji)))}(window,document,window._wpemojiSettings);
+		</script>
+		<style type="text/css">
+img.wp-smiley,
+img.emoji {
+	display: inline !important;
+	border: none !important;
+	box-shadow: none !important;
+	height: 1em !important;
+	width: 1em !important;
+	margin: 0 .07em !important;
+	vertical-align: -0.1em !important;
+	background: none !important;
+	padding: 0 !important;
+}
+</style>
+	<link rel='stylesheet' id='wp-block-library-css'  href='http://phymain.unisciel.fr/wp-includes/css/dist/block-library/style.min.css?ver=46e54c47b4ac548c1e5f6201cedf6127' type='text/css' media='all' />
+<link rel='stylesheet' id='twentytwelve-fonts-css'  href='http://fonts.googleapis.com/css?family=Open+Sans:400italic,700italic,400,700&#038;subset=latin,latin-ext' type='text/css' media='all' />
+<link rel='stylesheet' id='twentytwelve-style-css'  href='http://phymain.unisciel.fr/wp-content/themes/phymain_1_2/style.css?ver=46e54c47b4ac548c1e5f6201cedf6127' type='text/css' media='all' />
+<!--[if lt IE 9]>
+<link rel='stylesheet' id='twentytwelve-ie-css'  href='http://phymain.unisciel.fr/wp-content/themes/phymain_1_2/css/ie.css?ver=20121010' type='text/css' media='all' />
+<![endif]-->
+<script type='text/javascript' src='//platform-api.sharethis.com/js/sharethis.js#product=ga'></script>
+<link rel='https://api.w.org/' href='http://phymain.unisciel.fr/wp-json/' />
+
+<link rel="canonical" href="http://phymain.unisciel.fr/experience-du-brachistochrone/" />
+<link rel='shortlink' href='http://phymain.unisciel.fr/?p=1540' />
+<link rel="alternate" type="application/json+oembed" href="http://phymain.unisciel.fr/wp-json/oembed/1.0/embed?url=http%3A%2F%2Fphymain.unisciel.fr%2Fexperience-du-brachistochrone%2F" />
+<link rel="alternate" type="text/xml+oembed" href="http://phymain.unisciel.fr/wp-json/oembed/1.0/embed?url=http%3A%2F%2Fphymain.unisciel.fr%2Fexperience-du-brachistochrone%2F&#038;format=xml" />
+<script type="text/javascript" src="http://phymain.unisciel.fr/wp-content/plugins/si-captcha-for-wordpress/captcha/si_captcha.js?ver=1569165269"></script>
+<!-- begin SI CAPTCHA Anti-Spam - login/register form style -->
+<style type="text/css">
+.si_captcha_small { width:175px; height:45px; padding-top:10px; padding-bottom:10px; }
+.si_captcha_large { width:250px; height:60px; padding-top:10px; padding-bottom:10px; }
+img#si_image_com { border-style:none; margin:0; padding-right:5px; float:left; }
+img#si_image_reg { border-style:none; margin:0; padding-right:5px; float:left; }
+img#si_image_log { border-style:none; margin:0; padding-right:5px; float:left; }
+img#si_image_side_login { border-style:none; margin:0; padding-right:5px; float:left; }
+img#si_image_checkout { border-style:none; margin:0; padding-right:5px; float:left; }
+img#si_image_jetpack { border-style:none; margin:0; padding-right:5px; float:left; }
+img#si_image_bbpress_topic { border-style:none; margin:0; padding-right:5px; float:left; }
+.si_captcha_refresh { border-style:none; margin:0; vertical-align:bottom; }
+div#si_captcha_input { display:block; padding-top:15px; padding-bottom:5px; }
+label#si_captcha_code_label { margin:0; }
+input#si_captcha_code_input { width:65px; }
+p#si_captcha_code_p { clear: left; padding-top:10px; }
+.si-captcha-jetpack-error { color:#DC3232; }
+</style>
+<!-- end SI CAPTCHA Anti-Spam - login/register form style -->
+	<style type="text/css">
+			.site-title,
+		.site-description {
+			position: absolute !important;
+			clip: rect(1px 1px 1px 1px); /* IE7 */
+			clip: rect(1px, 1px, 1px, 1px);
+		}
+		</style>
+	<link rel="stylesheet" href="http://phymain.unisciel.fr/wp-content/themes/phymain_1_2/fs/flexslider.css" type="text/css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>
+<script src="http://phymain.unisciel.fr/wp-content/themes/phymain_1_2/fs/jquery.flexslider.js"></script>
+<script>
+var style = "border: 1px solid grey; padding: 0; margin: 0;width:640px;height:380px";
+$(document).ready( function () {
+    $('.fs').click(function(event){
+        event.preventDefault();
+        if($('#FS').hasClass('mediaVideoFs')) {
+           $('#FS').removeClass('mediaVideoFs');
+           $('iframe').attr("style", style);
+           $(this).html("Plein ecran");
+        } else {
+                $('#FS').addClass("mediaVideoFs");
+                $('.mediaVideoFs').animate({'opacity':'1.00'}, 300, 'linear');
+                $('iframe').attr("style", "");
+                $('iframe').width("99%");
+                $('iframe').height("95%");
+                $('.mediaVideoFs').css('display', 'block');
+                $(this).html("Réduire");
+        }
+    });
+});
+$(document).keydown(function(e){
+   var code = e.keyCode ? e.keyCode : e.which;
+   if (code == 27 && $('#FS').hasClass('mediaVideoFs')) {
+        $('#FS').removeClass('mediaVideoFs');
+        $('iframe').attr("style", style);
+        $(this).html("Plein ecran");
+    }
+});
+function getCookie(name) {
+	var cookieValue = null;
+	if (document.cookie && document.cookie != '') {
+		var cookies = document.cookie.split(';');
+		for (var i = 0; i < cookies.length; i++) {
+			var cookie = jQuery.trim(cookies[i]);
+			// Does this cookie string begin with the name we want?
+			if (cookie.substring(0, name.length + 1) == (name + '=')) {
+				cookieValue = decodeURIComponent(cookie.substring(name.length + 1));
+				break;
+			}
+		}
+	} else {
+	//alert(document.cookie+" - "+"<div style='display:none'><input type='hidden' name='csrfmiddlewaretoken' value='XIbv4iZipabl5wuQoFvMaX8ZojdpNsQv' /></div>");
+}
+return cookieValue;
+}
+function createCookie(name,value,days) {
+	if (days) {
+		var date = new Date();
+		date.setTime(date.getTime()+(days*24*60*60*1000));
+		var expires = "; expires="+date.toGMTString();
+	}
+	else var expires = "";
+	document.cookie = escape(name)+"="+escape(value)+expires+"; path=/";
+}
+$(document).ready( function () {
+    $('.switchMode').click(function(event){
+		event.preventDefault();
+		if($('#content').hasClass('list')) {
+           $('#content').removeClass('list');
+		   $('#content').addClass("mosaic");
+		   createCookie("displayMode", "mosaic", null);
+		} else {
+			$('#content').removeClass('mosaic');
+			$('#content').addClass("list");
+			createCookie("displayMode", "list", null);
+		}
+	});
+	var displayMode = getCookie("displayMode");
+	if(displayMode && displayMode=="list") $('#content').addClass('list');
+});
+
+</script>
+</head>
+
+<body class="post-template-default single single-post postid-1540 single-format-standard custom-font-enabled">
+<div id="page" class="hfeed site">
+	<header id="masthead" class="site-header" role="banner">
+		<hgroup>
+			<h1 class="site-title"><a href="http://phymain.unisciel.fr/" title="Physique à Main Levée" rel="home">Physique à Main Levée</a></h1>
+			<h2 class="site-description">300 expériences de physique</h2>
+		</hgroup>
+
+		<nav id="site-navigation" class="main-navigation" role="navigation">
+			<h3 class="menu-toggle">Menu</h3>
+			<a class="assistive-text" href="#content" title="Aller au contenu principal">Aller au contenu principal</a>
+					</nav><!-- #site-navigation -->
+
+					<a href="http://phymain.unisciel.fr/"><img src="http://phymain.unisciel.fr/wp-content/uploads/2017/02/logo2017-02.png" class="header-image" width="1107" height="188" alt="" /></a>
+			</header><!-- #masthead -->
+<div xmlns:v="http://rdf.data-vocabulary.org/#" class="breadcrumb">Site  &raquo; <span typeof="v:Breadcrumb"><a title="Physique à Main Levée" href="http://phymain.unisciel.fr" rel="v:url" property="v:title">Physique à Main Levée</a></span> &raquo; <span typeof="v:Breadcrumb"><a href="http://phymain.unisciel.fr/category/mecanique-des-solides/" title="Voir tous les articles de Mécanique des solides" rel="v:url" property="v:title">Mécanique des solides</a></span> &raquo; Expérience du brachistochrone</div>	<div id="main" class="wrapper">	<div id="primary" class="site-content">
+		<div id="content" role="main">
+
+			
+					<article id="post-1540" class="fiche post-1540 post type-post status-publish format-standard has-post-thumbnail hentry category-mecanique-des-solides">
+				<header class="entry-header">
+			
+						<h1 class="entry-title">Expérience du brachistochrone</h1>
+			<div class="thumbFiche"><img width="150" height="150" src="http://phymain.unisciel.fr/wp-content/uploads/2013/07/Capture_mds0321-150x150.gif" class="attachment-thumbnail size-thumbnail wp-post-image" alt="" /></div>
+					</header><!-- .entry-header -->
+
+				<div class="entry-content">
+			<p>Cette expérience contredit l&rsquo;idée reçue que le chemin le plus rapide pour aller d&rsquo;un point à un autre est forcément la ligne droite qui joint ces deux points. Deux billes identiques partent d&rsquo;un même point A pour arriver au même point B, mais en suivant deux trajectoires d&rsquo;inégale longueur. Sauriez-vous prévoir quelle est celle qui arrivera la première ?<br /><span id="more-1540"></span></p>
+<p><iframe src="http://pod.univ-lille1.fr/physique-a-main-levee/mecanique-des-solides/video/1361-experience-du-brachistochrone/?is_iframe=true&#038;size=240" width="640" height="360" style="padding: 0; margin: 0; border:0" allowfullscreen ></iframe></p>
+<p><img title="Lire la suite…" alt="" src="http://phymain.unisciel.fr/wp-includes/js/tinymce/plugins/wordpress/img/trans.gif" /></p>
+<p><span style="background-color: #ffff00;"><strong>Fiche</strong></span><strong><span style="background-color: #ffff00;"> d&rsquo;accompagnement de l&rsquo;expérience:</span><br /></strong> <img alt="" src="http://phymain.unisciel.fr/wp-content/uploads/2013/07/Capture_mds032.GIF" width="187" height="195" /></p>
+<div class="ficheH3"><img class="picto" src="http://phymain.unisciel.fr/wp-content/themes/phymain_1_2/img/picto_matos.png" /><span>Mat&eacute;riel</span></div>
+<div>
+<ul>
+<li>
+<p>le profil supérieur d&rsquo;une baguette électrique, (longueur : 2 m ; largeur : environ 15 mm, disponible dans une grande surface de bricolage) ou bien tuyau transparent (diamètre intérieur : environ 15 mm)</p>
+</li>
+<li>
+<p>2 billes identiques (diamètre : 5 à10 mm)</p>
+</li>
+<li>
+<p>du ruban adhésif résistant</p>
+</li>
+<li>
+<p>facultatif : 2 morceaux de craie</p>
+</li>
+<li>
+<p>facultatif : une planche (dimensions : environ 30 cm ´ 100 cm)</p>
+</li>
+<li>
+<p>facultatif : clous et marteau</p>
+</li>
+</ul>
+</div>
+<div class="ficheH3"><img class="picto" src="http://phymain.unisciel.fr/wp-content/themes/phymain_1_2/img/picto_montage.png" /><span>Montage et r&eacute;alisation</span></div>
+<div>
+<p>Couper dans le couvercle de la baguette électrique deux morceaux de longueurs respectives 93 cm et 100 cm qui serviront de pistes pour les billes.</p>
+<p>Les disposer parallèlement et de telle sorte que la face creuse du profil en U soit orientée vers le haut. Coller côte à côte les extrémités des deux baguettes au moyen du ruban adhésif.</p>
+<p>Courber la baguette la plus longue puis coller de la même façon les deux autres extrémités (voir la figure). L&rsquo;intérieur du U de la plus longue des baguettes doit être dirigé vers l&rsquo;intérieur de la concavité (voir figure). Maintenir le dispositif de telle sorte que l&rsquo;inclinaison par rapport à l&rsquo;horizontale de la trajectoire rectiligne soit d&rsquo;environ 30°.</p>
+<p>Lâcher simultanément les billes sur les trajectoires à partir de la position de départ (figure) : c&rsquo;est la bille située sur la trajectoire courbe qui arrive la première.</p>
+<p>Pour identifier plus facilement laquelle des deux billes atteint en premier l&rsquo;arrivée, on peut placer des morceaux de craie à l&rsquo;arrivée de chacune des trajectoires et observer lequel est renversé en premier.</p>
+<p>Peu importe si les deux billes ne sont pas de la même taille et si elles sont de matériaux de densités différentes à condition que le matériau soit homogène. On peut le montrer en recommençant l&rsquo;expérience après avoir permuté les deux billes.</p>
+<p>Comme alternative à la baguette électrique on peut utiliser des tuyaux de plastique transparent dont une extrémité a été clouée à une planche verticale pour réaliser un profil rectiligne et un profil courbe.</p>
+</div>
+<div class="ficheH3"><img class="picto" src="http://phymain.unisciel.fr/wp-content/themes/phymain_1_2/img/picto_explication.png" /><span>Explications</span></div>
+<div>
+<p>Le traitement quantitatif du mouvement d&rsquo;un point matériel sur des trajectoires de courbures variées et la réponse analytique à la question du profil de trajectoire dont le temps de parcours est le plus court (brachistochrone) font appel à des méthodes mathématiques relativement difficiles qui relèvent du calcul des variations. Ce problème est traité dans pratiquement tous les livres de mécanique théorique.</p>
+<p>Développons maintenant un exemple, compréhensible par un étudiant ou un élève, et à partir duquel on peut montrer qu&rsquo;il existe au moins une trajectoire sur laquelle la durée du trajet est plus courte que sur la trajectoire rectiligne. On considérera un point matériel glissant sans frottement. Pour une bille qui roule parfaitement, on obtient des résultats identiques.</p>
+<p>Soit une première trajectoire rectiligne entre les points <img alt="" src="http://phymain.unisciel.fr/wp-content/uploads/2013/07/Fiches_web_jmb_web_mds032/res/Mds032.png" /> et <img alt="" src="http://phymain.unisciel.fr/wp-content/uploads/2013/07/Fiches_web_jmb_web_mds032/res/Mds032_1.png" /> (voir figure).</p>
+<p>La deuxième trajectoire présente un tronçon rectiligne de<br /> <img alt="" src="http://phymain.unisciel.fr/wp-content/uploads/2013/07/Fiches_web_jmb_web_mds032/res/Mds032.png" /> à<br /> <img alt="" src="http://phymain.unisciel.fr/wp-content/uploads/2013/07/Fiches_web_jmb_web_mds032/res/Mds032_2.png" /> <br />et un autre tronçon rectiligne entre ce dernier point et le point d&rsquo;arrivée <img alt="" src="http://phymain.unisciel.fr/wp-content/uploads/2013/07/Fiches_web_jmb_web_mds032/res/Mds032_1.png" /> (voir figure).<br />Si l&rsquo;on prend<br /> <img alt="" src="http://phymain.unisciel.fr/wp-content/uploads/2013/07/Fiches_web_jmb_web_mds032/res/Mds032_3.png" /><br /> (c&rsquo;est-à-dire <img alt="" src="http://phymain.unisciel.fr/wp-content/uploads/2013/07/Fiches_web_jmb_web_mds032/res/Mds032_4.png" /> , voir figure ), alors les segments ont pour longueurs s1, s2 et s3 (voir figure) :<br /><img alt="" src="http://phymain.unisciel.fr/wp-content/uploads/2013/07/Fiches_web_jmb_web_mds032/res/Mds032_5.png" /> ,<br /> <img alt="" src="http://phymain.unisciel.fr/wp-content/uploads/2013/07/Fiches_web_jmb_web_mds032/res/Mds032_6.png" /> ,<br /> <img alt="" src="http://phymain.unisciel.fr/wp-content/uploads/2013/07/Fiches_web_jmb_web_mds032/res/Mds032_7.png" /></p>
+<p>Calculons le temps t1 mis par le point matériel pour parcourir la trajectoire rectiligne (distance s1), en prenant la vitesse initiale nulle au point (0, z0) :<br /><img alt="" src="http://phymain.unisciel.fr/wp-content/uploads/2013/07/Fiches_web_jmb_web_mds032/res/Mds032_8.png" /><br />(g : valeur de l&rsquo;accélération de la pesanteur).<br />Calculons de la même façon la durée <img alt="" src="http://phymain.unisciel.fr/wp-content/uploads/2013/07/Fiches_web_jmb_web_mds032/res/Mds032_9.png" /> du parcours <img alt="" src="http://phymain.unisciel.fr/wp-content/uploads/2013/07/Fiches_web_jmb_web_mds032/res/Mds032_10.png" /> (également avec une vitesse initiale nulle) :<br /><img alt="" src="http://phymain.unisciel.fr/wp-content/uploads/2013/07/Fiches_web_jmb_web_mds032/res/Mds032_11.png" /><br />car<br /><img alt="" src="http://phymain.unisciel.fr/wp-content/uploads/2013/07/Fiches_web_jmb_web_mds032/res/Mds032_12.png" /></p>
+<p>Au point<br /> <img alt="" src="http://phymain.unisciel.fr/wp-content/uploads/2013/07/Fiches_web_jmb_web_mds032/res/Mds032_2.png" /> ,<br /> lors de son passage sur le deuxième tronçon (distance s3), le point matériel possède une vitesse de valeur <img alt="" src="http://phymain.unisciel.fr/wp-content/uploads/2013/07/Fiches_web_jmb_web_mds032/res/Mds032_13.png" /> :<br /><img alt="" src="http://phymain.unisciel.fr/wp-content/uploads/2013/07/Fiches_web_jmb_web_mds032/res/Mds032_14.png" /><br />On en déduit alors le temps t3 de parcours de la distance s3 :<br /><img alt="" src="http://phymain.unisciel.fr/wp-content/uploads/2013/07/Fiches_web_jmb_web_mds032/res/Mds032_15.png" /><br />avec<br /><img alt="" src="http://phymain.unisciel.fr/wp-content/uploads/2013/07/Fiches_web_jmb_web_mds032/res/Mds032_16.png" /><br />d&rsquo;où<br /><img alt="" src="http://phymain.unisciel.fr/wp-content/uploads/2013/07/Fiches_web_jmb_web_mds032/res/Mds032_17.png" /><br />La durée totale de parcours des distances s2 et s3 est :<br /><img alt="" src="http://phymain.unisciel.fr/wp-content/uploads/2013/07/Fiches_web_jmb_web_mds032/res/Mds032_18.png" /></p>
+<p>On vérifie qu&rsquo;elle est bien inférieure à la durée t1.</p>
+</div>
+<div>
+<div><img class="aligncenter" alt="" src="http://phymain.unisciel.fr/wp-content/uploads/2013/07/mds032_8.jpg" width="340" height="242" /></div>
+</div>
+<div class="ficheH3"><img class="picto" src="http://phymain.unisciel.fr/wp-content/themes/phymain_1_2/img/picto_remarques.png" /><span>Remarques</span></div>
+<div>
+<p>La question de la trajectoire du mouvement le plus rapide entre deux points donnés (problème du brachistochrone) a été posée en 1696 par Jean Bernoulli (1667-1748) à son frère Jacques Bernoulli (1654-1705) et à ses collègues, parmi lesquels se trouvait Isaac Newton (1643-1727).</p>
+<p>Pour le plus grand dépit de Jean Bernoulli, c&rsquo;est justement son frère Jacques, avec lequel il ne s&rsquo;entendait pas, qui a présenté la solution la plus élégante comparant la trajectoire avec le trajet optique dans un milieu d&rsquo;indice de réfraction variable.</p>
+<p>Jacques appliquait le principe de Fermat (temps de parcours le plus court) et les lois bien connues de la chute des corps en exploitant les propriétés d&rsquo;une cycloïde (la solution du problème).</p>
+<p>La résolution de ce problème fut à l&rsquo;origine du développement d&rsquo;un nouveau domaine des mathématiques : le calcul des variations.</p>
+</div>
+<p class="bawpvc-ajax-counter" data-id="1540">
+<div class="viewscount">cette fiche a été vue 5222 fois</div></p>
+					</div><!-- .entry-content -->
+		
+		<footer class="entry-meta">
+											</footer><!-- .entry-meta -->
+	</article><!-- #post -->
+
+				<nav class="nav-single">
+					<h3 class="assistive-text">Navigation des articles</h3>
+					<span class="nav-previous"><a href="http://phymain.unisciel.fr/un-tourniquet-hydraulique/" rel="prev"><span class="meta-nav">&larr;</span> Un tourniquet hydraulique</a></span>
+					<span class="nav-next"><a href="http://phymain.unisciel.fr/course-entre-deux-cartes/" rel="next">Course entre deux cartes <span class="meta-nav">&rarr;</span></a></span>
+				</nav><!-- .nav-single -->
+
+				
+<div id="comments" class="comments-area">
+
+	
+	
+	
+</div><!-- #comments .comments-area -->
+			
+		</div><!-- #content -->
+	</div><!-- #primary -->
+
+			<div id="secondary" class="widget-area" role="complementary">
+			<aside id="nav_menu-2" class="widget widget_nav_menu"><h3 class="widget-title">CATÉGORIES</h3><div class="menu-categories-container"><ul id="menu-categories" class="menu"><li id="menu-item-28" class="acoustique menu-item menu-item-type-taxonomy menu-item-object-category menu-item-28"><a href="http://phymain.unisciel.fr/category/acoustique/">ACOUSTIQUE</a></li>
+<li id="menu-item-309" class="chaleur menu-item menu-item-type-taxonomy menu-item-object-category menu-item-309"><a href="http://phymain.unisciel.fr/category/chaleur/">CHALEUR</a></li>
+<li id="menu-item-311" class="electricite menu-item menu-item-type-taxonomy menu-item-object-category menu-item-311"><a href="http://phymain.unisciel.fr/category/electricite/">ELECTRICITÉ</a></li>
+<li id="menu-item-312" class="magnetisme menu-item menu-item-type-taxonomy menu-item-object-category menu-item-312"><a href="http://phymain.unisciel.fr/category/magnetisme/">MAGNÉTISME</a></li>
+<li id="menu-item-313" class="mecagaz menu-item menu-item-type-taxonomy menu-item-object-category menu-item-313"><a href="http://phymain.unisciel.fr/category/mecanique-des-gaz/">MÉCANIQUE DES GAZ</a></li>
+<li id="menu-item-314" class="mecaliq menu-item menu-item-type-taxonomy menu-item-object-category menu-item-314"><a href="http://phymain.unisciel.fr/category/mecanique-des-liquides/">MÉCANIQUE DES LIQUIDES</a></li>
+<li id="menu-item-315" class="mecasol menu-item menu-item-type-taxonomy menu-item-object-category current-post-ancestor current-menu-parent current-post-parent menu-item-315"><a href="http://phymain.unisciel.fr/category/mecanique-des-solides/">MÉCANIQUE DES SOLIDES</a></li>
+<li id="menu-item-316" class="optique menu-item menu-item-type-taxonomy menu-item-object-category menu-item-316"><a href="http://phymain.unisciel.fr/category/optique/">OPTIQUE</a></li>
+<li id="menu-item-310" class="divers menu-item menu-item-type-taxonomy menu-item-object-category menu-item-310"><a href="http://phymain.unisciel.fr/category/divers/">DIVERS</a></li>
+<li id="menu-item-3398" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3398"><a href="http://phymain.unisciel.fr/actualites-et-diffusion/">Actualités et diffusion</a></li>
+</ul></div></aside><aside id="nav_menu-3" class="widget widget_nav_menu"><div class="menu-menu2-container"><ul id="menu-menu2" class="menu"><li id="menu-item-331" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-331"><a href="http://phymain.unisciel.fr/presentation/">Présentation</a></li>
+</ul></div></aside><aside id="search-2" class="widget widget_search"><form role="search" method="get" id="searchform" class="searchform" action="http://phymain.unisciel.fr/">
+				<div>
+					<label class="screen-reader-text" for="s">Rechercher :</label>
+					<input type="text" value="" name="s" id="s" />
+					<input type="submit" id="searchsubmit" value="Rechercher" />
+				</div>
+			</form></aside><aside id="text-2" class="widget widget_text"><h3 class="widget-title">A découvrir aussi:</h3>			<div class="textwidget"><a href="http://kezako.unisciel.fr"><img src="http://phymain.unisciel.fr/wp-content/uploads/2015/02/kezako_pub_phymain.png" width=70%></a></div>
+		</aside>		<aside id="recent-posts-2" class="widget widget_recent_entries">		<h3 class="widget-title">Articles récents</h3>		<ul>
+											<li>
+					<a href="http://phymain.unisciel.fr/le-moteur-homopolaire/">Le moteur homopolaire</a>
+									</li>
+											<li>
+					<a href="http://phymain.unisciel.fr/le-brumisateur-et-les-ondes-de-faraday/">Le brumisateur et les ondes de Faraday</a>
+									</li>
+											<li>
+					<a href="http://phymain.unisciel.fr/le-drapeau-tricolore/">Le drapeau tricolore</a>
+									</li>
+											<li>
+					<a href="http://phymain.unisciel.fr/le-son-se-propage-t-il-dans-le-vide/">Le son se propage-t-il dans le vide ?</a>
+									</li>
+											<li>
+					<a href="http://phymain.unisciel.fr/loiseau-buveur/">L&rsquo;oiseau buveur</a>
+									</li>
+					</ul>
+		</aside>		</div><!-- #secondary -->
+		</div><!-- #main .wrapper -->
+	<footer id="colophon" role="contentinfo">
+		<div class="site-info"> <a href="http://www.univ-lille1.fr" target="_blank"><img src="http://phymain.unisciel.fr/wp-content/uploads/2017/02/UL1-2014-72dpi.jpg" alt="Université de Lille, Sciences & Technologies"></a> <a href="http://www.unisciel.fr" target="_blank"><img src="http://phymain.unisciel.fr/wp-content/uploads/2017/02/Unisciel_logo_2009.png" alt="Unisciel"></a></div>
+		<a href="http://phymain.unisciel.fr/wp-admin">accès restreint</a><!-- .site-info -->
+	</footer><!-- #colophon -->
+</div><!-- #page -->
+
+<script>
+    jQuery(document).ready(function () {
+		jQuery.post('http://phymain.unisciel.fr?ga_action=googleanalytics_get_script', {action: 'googleanalytics_get_script'}, function(response) {
+			var s = document.createElement("script");
+			s.type = "text/javascript";
+			s.innerHTML = response;
+			jQuery("head").append(s);
+		});
+    });
+</script><script type='text/javascript' src='http://phymain.unisciel.fr/wp-content/themes/phymain_1_2/js/navigation.js?ver=1.0'></script>
+<script type='text/javascript' src='http://phymain.unisciel.fr/wp-includes/js/wp-embed.min.js?ver=46e54c47b4ac548c1e5f6201cedf6127'></script>
+<script type='text/javascript' src='http://phymain.unisciel.fr/wp-includes/js/jquery/jquery.js?ver=1.12.4-wp'></script>
+<script type='text/javascript' src='http://phymain.unisciel.fr/wp-includes/js/jquery/jquery-migrate.min.js?ver=1.4.1'></script>
+<script>
+jQuery( document ).ready( function($) {
+	$('.bawpvc-ajax-counter').each( function( i ) {
+		var $id = $(this).data('id');
+		var t = this;
+		var n = 1;
+		$.get('http://phymain.unisciel.fr/wp-admin/admin-ajax.php?action=bawpvc-ajax-counter&p='+$id+'&n='+n, function( html ) {
+			$(t).html( html );
+		})
+	});
+});
+</script>
+<!-- Piwik -->
+<script type="text/javascript">
+  var _paq = _paq || [];
+  _paq.push(["trackPageView"]);
+  _paq.push(["enableLinkTracking"]);
+
+  (function() {
+    var u=(("https:" == document.location.protocol) ? "https" : "http") + "://webstat.univ-lille1.fr/";
+    _paq.push(["setTrackerUrl", u+"piwik.php"]);
+    _paq.push(["setSiteId", "15"]);
+    var d=document, g=d.createElement("script"), s=d.getElementsByTagName("script")[0]; g.type="text/javascript";
+    g.defer=true; g.async=true; g.src=u+"piwik.js"; s.parentNode.insertBefore(g,s);
+  })();
+</script>
+<!-- End Piwik Code -->
+</body>
+</html>
