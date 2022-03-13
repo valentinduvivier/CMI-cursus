@@ -1,0 +1,1 @@
+np.linspace(2**-4, 2**-1, 10) can go up to 1.1*2**-5
