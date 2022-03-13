@@ -1,0 +1,2 @@
+To download SU2, please refer to 'InstallationSU2.pdf' file. The document 'CFD - An Open-Source Approach.pdf' on the other hand 
+offers some documentation and entirely explained examples of optimizations via SU2.
